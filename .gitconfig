@@ -1,3 +1,5 @@
 [user]
 	email = marcilio.mcn@gmail.com
 	name = Marcilio Nascimento
+[status]
+	showUntrackedFiles = no
