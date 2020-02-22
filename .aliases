@@ -1,0 +1,4 @@
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias grep='grep --color=always'
+alias ls='ls -lha --color=auto'
+alias tempo='curl wttr.in/sao-paulo'
