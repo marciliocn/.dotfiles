@@ -1,0 +1,10 @@
+#! /bin/sh
+
+# Disable default GRML theme
+prompt off
+
+# Prompt custom
+PS1='%B%F{green}%~%f%b $ '
+
+# Append alias to ZSH
+[ -f ~/.aliases ] && source .aliases
