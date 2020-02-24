@@ -1,11 +1,12 @@
 #TAG,REPO NAME,PURPOSE (should be a verb phrase to sound right while installing)
 s,xorg-minimal,"is the graphical server."
-s,zsh,"is a improved UNIX shell over bash."
+s,zsh,"is a improved UNIX shell over Bash."
 s,xset,"allows speeding (keyboard) up the X rate."
 s,xclip,"allows for copying and pasting from the command line."
 s,alsa-utils,"are a utilities for sound management."
 s,bspwm,"is the tiling window manager."
 s,sxhkd,"is a simple X hotkey daemon."
+s,hsetroot,"is a tool to change X server wallpapers."
 s,picom,"is for transparency and removing screen-tearing (fork from compton)."
 s,xterm,"is a classical terminal for X."
 s,st,"is a terminal emulator from suckless."
