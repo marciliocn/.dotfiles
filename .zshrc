@@ -1,3 +1,5 @@
+#! /bin/sh
+
 PS1='%B%F{green}%~%f%b $ '
 
 [ -f ~/.aliases ] && source .aliases
