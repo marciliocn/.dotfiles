@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -16,4 +16,4 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 # Set wallpaper
-while true; do hsetroot -fill $(find ~/walls -type f | shuf -n 1); sleep 30s; done
+while true; do hsetroot -fill $(find ~/walls -type f | shuf -n 1); sleep 30s; done &
