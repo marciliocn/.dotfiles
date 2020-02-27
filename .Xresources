@@ -1,12 +1,35 @@
-! These options only take effect on startup.
+!-These options only take effect on startup
 XTerm.termName: xterm-256color
 
-! The following options options can be reloaded via USR1 signal.
+!-The following options can be reloaded via USR1 signal
 XTerm*faceName: Inconsolata
-XTerm*faceSize: 12 
+XTerm*faceSize: 12
 
-! Better Font Rendering =========================
-Xft.autohint: 0 
+!-Border for terminal
+XTerm*borderWidth: 10
+
+!-Keybinding =========================
+! http://blog.rot13.org/2010/03/change-font-size-in-xterm-using-keyboard.html
+! - change fontsize on the fly (ctrl+plus = increase ; ctrl+minus = decrease, ctrl+0 = default)
+! - copy/paste hotkey (ctrl+shift+c = copy ; ctrl+shift+v = paste)
+! - open url (clickable links)
+!   1) double click to highlight the full url
+!   2) Shift + click it to open it
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> minus: smaller-vt-font() \n\
+  Ctrl <Key> plus: larger-vt-font() \n\
+  Ctrl <Key> 0: set-vt-font(d) \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+  Shift <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY) \n\
+  <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
+  <Btn2Up>: insert-selection(PRIMARY)
+
+!-Enable copy/paste hotkey to work (shift+insert = paste ; mouse highlight = copy)
+XTerm*selectToClipboard: true
+
+!-Better Font Rendering =========================
+Xft.autohint: 0
 Xft.antialias: 1
 Xft.hinting: true
 Xft.hintstyle: hintslight
@@ -14,7 +37,7 @@ Xft.dpi: 96
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
 
-! Defaults taken from base16-twilight colorscheme.
+!-Defaults taken from base16-twilight colorscheme
 *foreground:   #a7a7a7
 *background:   #1e1e1e
 *color0:       #1e1e1e
