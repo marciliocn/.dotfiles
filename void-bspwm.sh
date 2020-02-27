@@ -25,11 +25,15 @@ sudo xbps-install -y $(grep '^s' apps.csv | cut -d , -f 2)
 
 clear
 echo ''
-echo 'Change shell for ${USER}'
+echo 'Change shell for $USER'
 echo ''
 # Change shell for $USER
 chsh -s /usr/bin/zsh
 
+clear
+echo ''
+echo 'Audio  and Video Apps'
+echo ''
 # Check if want install audio/video apps
 AV_APPS="sudo xbps-install -y $(grep '^a' apps.csv | cut -d , -f 2)"
 read  -p "Are you want install Audio/Video apps? [Y/n]:" answ_av
@@ -38,6 +42,10 @@ read  -p "Are you want install Audio/Video apps? [Y/n]:" answ_av
 # Install Audio/Video Apps
 $AV_APPS
 
+clear
+echo ''
+echo 'Graphics Apps'
+echo ''
 # Check if want install graphics apps
 G_APPS="sudo xbps-install -y $(grep '^g' apps.csv | cut -d , -f 2)"
 read  -p "Are you want install Graphics apps? [Y/n]:" answ_g
