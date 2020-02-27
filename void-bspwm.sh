@@ -12,7 +12,7 @@ echo '############################################'
 # Settings
 FIREWALL=0 # 1=Install, 0=Do not install (install only if running some server daemon)
 
-# Configure Firewall if 1
+# Configure Firewall if FIREWALL=1
 if [ $FIREWALL -eq 1 ]; then
 	sudo xbps-install -y ufw
 	sudo xbps-reconfigure ufw
@@ -22,6 +22,29 @@ fi
 
 # Install packages from apps.csv
 sudo xbps-install -y $(grep '^s' apps.csv | cut -d , -f 2)
+
+clear
+echo ''
+echo 'Change shell for ${USER}'
+echo ''
+# Change shell for $USER
+chsh -s /usr/bin/zsh
+
+# Check if want install audio/video apps
+AV_APPS="sudo xbps-install -y $(grep '^a' apps.csv | cut -d , -f 2)"
+read  -p "Are you want install Audio/Video apps? [Y/n]:" answ_av
+[ "$answ_av" = "n" ] && AV_APPS=""
+
+# Install Audio/Video Apps
+$AV_APPS
+
+# Check if want install graphics apps
+G_APPS="sudo xbps-install -y $(grep '^g' apps.csv | cut -d , -f 2)"
+read  -p "Are you want install Graphics apps? [Y/n]:" answ_g
+[ "$answ_g" = "n" ] && G_APPS=""
+
+# Install Audio/Video Apps
+$G_APPS
 
 # Configure bspwm and sxhkd start (disable after customize dotfiles for bspwm and sxhkd)
 # mkdir -p ~/.config/{bspwm,sxhkd}
