@@ -2,6 +2,7 @@
 
 # Apps starting with Xorg
 sxhkd & # wm independent hotkey
+(sleep 1 && xcompmgr) & # composite manager for transparency and tearing
 
 # Increase keyboard speed
 xset r rate 200 50
