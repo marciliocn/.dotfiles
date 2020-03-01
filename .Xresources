@@ -7,6 +7,9 @@ st.termName:     st-256color
 ! if you do not set shell, precedence is: -e arg, utmp option, SHELL env var, /etc/passwd shell
 !st.shell:        /bin/sh
 
+! Cursor theme
+Xcursor.theme: Breeze_Obsidian
+
 ! The following options can be reloaded via USR1 signal
 st.font:              Inconsolata:size=14:antialias=true:autohint=true;
 !st.borderpx:          10
