@@ -2,6 +2,7 @@
 s,xorg-minimal,"is the graphical server."
 s,zsh,"is a improved UNIX shell over Bash."
 s,grml-zsh-config,"is a bunch of ZSH configs (keys, alias, functions, etc) for lazzy people."
+s,zsh-syntax-highlighting,"provides fish-like syntax highlighting in the shell."
 s,xst,"is a fork from classical suckless st."
 s,xset,"allows speeding (keyboard) up the X rate."
 s,xsetroot,"allows bugfix from bspwm cursor on login."

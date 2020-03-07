@@ -8,3 +8,6 @@ PS1='%B%F{green}%~%f%b $ '
 
 # Append alias to ZSH
 [ -f ~/.aliases ] && source .aliases
+
+# Append ZSH Highlighting like FISH Shell
+[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -24,9 +24,6 @@ fi
 sudo xbps-install -y $(grep '^s' apps.csv | cut -d , -f 2)
 
 clear
-echo ''
-echo 'Change shell for $USER'
-echo ''
 # Change shell for $USER
 chsh -s /usr/bin/zsh
 
