@@ -51,6 +51,27 @@ read  -p "Are you want install Graphics apps? [Y/n]:" answ_g
 # Install Audio/Video Apps
 $G_APPS
 
+clear
+echo ''
+echo 'Flatpak Apps'
+echo ''
+# Define execution string for Flatpak apps
+F_APPS="sudo xbps-install -y $(grep '^f,' apps.csv | cut -d , -f 2)"
+
+# Check if want install graphics apps
+read  -p "Are you want install Flatpak apps? [Y/n]:" answ_f
+
+if [ "$answ_f" = "n" ]; then
+	F_APPS=""
+else
+	# Install Flatpak Apps
+	$F_APPS
+	# Add Flathub (http://flathub.org/) repository for Flatpak
+	flatpak remote-add --user flathub https://flathub.org/repo/flathub.flatpakrepo
+	# Install apps from apps.csv starting with 'fa' (flatpak app)
+	flatpak install -y $(grep '^fa' apps.csv | cut -d , -f 2)
+fi
+
 # Configure bspwm and sxhkd start (disable after customize dotfiles for bspwm and sxhkd)
 # mkdir -p ~/.config/{bspwm,sxhkd}
 # cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm
