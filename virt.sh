@@ -1,7 +1,16 @@
 #!/bin/sh
 
+# Exit immediately if a command exits with a non-zero exit status
+set -e
+
+clear
+echo ''
+echo '############################################'
+echo '########   Virt-Manager Installer   ########'
+echo '############################################'
+
 # Install essential packges for Virt-Manager (Virtualization)
-sudo xbps-install dbus qemu virt-manager
+sudo xbps-install -y dbus qemu virt-manager
 
 # Enable DBUS and Libvirt services
 sudo ln -s /etc/sv/dbus /var/service
