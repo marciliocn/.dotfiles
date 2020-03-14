@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Exit immediately if a command exits with a non-zero exit status
 set -e
@@ -80,6 +80,13 @@ fi
 # sed -i 's/urxvt/st/' ~/.config/sxhkd/sxhkdrc
 # echo 'exec bspwm' > ~/.xinitrc
 # Configure bspwm and sxhkd end
+
+# Update MAN database for installed apps (remove verbose messages)
+clear
+echo ''
+echo 'Update MAN database'
+echo ''
+sudo makewhatis /usr/share/man
 
 clear
 echo ''
