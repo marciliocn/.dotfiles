@@ -29,7 +29,7 @@ chsh -s /usr/bin/zsh
 
 clear
 echo ''
-echo 'Audio  and Video Apps'
+echo 'Audio and Video Apps'
 echo ''
 # Check if want install audio/video apps
 AV_APPS="sudo xbps-install -y $(grep '^a' apps.csv | cut -d , -f 2)"
