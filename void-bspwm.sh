@@ -33,7 +33,7 @@ echo 'Audio  and Video Apps'
 echo ''
 # Check if want install audio/video apps
 AV_APPS="sudo xbps-install -y $(grep '^a' apps.csv | cut -d , -f 2)"
-read  -p "Are you want install Audio/Video apps? [Y/n]:" answ_av
+read -p "Are you want install Audio/Video apps? [Y/n]:" answ_av
 [ "$answ_av" = "n" ] && AV_APPS=""
 
 # Install Audio/Video Apps
@@ -45,7 +45,7 @@ echo 'Graphics Apps'
 echo ''
 # Check if want install graphics apps
 G_APPS="sudo xbps-install -y $(grep '^g' apps.csv | cut -d , -f 2)"
-read  -p "Are you want install Graphics apps? [Y/n]:" answ_g
+read -p "Are you want install Graphics apps? [Y/n]:" answ_g
 [ "$answ_g" = "n" ] && G_APPS=""
 
 # Install Audio/Video Apps
@@ -58,8 +58,8 @@ echo ''
 # Define execution string for Flatpak apps
 F_APPS="sudo xbps-install -y $(grep '^f,' apps.csv | cut -d , -f 2)"
 
-# Check if want install graphics apps
-read  -p "Are you want install Flatpak apps? [Y/n]:" answ_f
+# Check if want install Flatpak apps
+read -p "Are you want install Flatpak apps? [Y/n]:" answ_f
 
 if [ "$answ_f" = "n" ]; then
 	F_APPS=""
