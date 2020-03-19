@@ -232,7 +232,7 @@ fileviewer *.[1-8] man ./%c | col -b
 " Images
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ {View in sxiv}
-        \ sxiv %f,
+        \ sxiv %f $(find . -type f \( ! -iname "%f" \) -print),
         \ {View in gpicview}
         \ gpicview %c,
         \ {View in shotwell}
@@ -450,12 +450,15 @@ nnoremap ,C :!gvim --remote-tab-silent $MYVIFMRC &<cr>
 nnoremap ,w :set wrap!<cr>
 
 " Example of standard two-panel file managers mappings
+nnoremap <f2> cw<c-a>
 nnoremap <f3> :!less %f<cr>
 nnoremap <f4> :edit<cr>
 nnoremap <f5> :copy<cr>
 nnoremap <f6> :move<cr>
-nnoremap <f7> :mkdir<space>
-nnoremap <f8> :delete<cr>
+nnoremap <f7> :delete<cr>
+nnoremap <f8> :touch<space>
+nnoremap <f9> :mkdir<space>
+nnoremap <f12> ZZ
 
 " ------------------------------------------------------------------------------
 
