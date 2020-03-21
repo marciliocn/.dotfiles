@@ -11,7 +11,10 @@
 " If you would like to use another vi clone such as Elvis or Vile
 " you will need to change this setting.
 
-set vicmd=vim
+" set vicmd=vim
+
+" [MCN] because I use NeoVim
+set vicmd=nvim
 " set vicmd=elvis\ -G\ termcap
 " set vicmd=vile
 
@@ -109,8 +112,10 @@ if !has('win')
 endif
 
 " Set custom status line look
+" set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
-set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
+" [MCN] Set custom status line look with total size of selected files
+set statusline="  %t%= %A %10u:%-7g %15E %20d  "
 
 " ------------------------------------------------------------------------------
 
@@ -395,6 +400,9 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 
 " Sample mappings
 
+" [MCN] Show bookmarks
+nnoremap B :bmarks<cr>
+
 " Start shell in current directory
 nnoremap s :shell<cr>
 
@@ -439,7 +447,10 @@ nnoremap cc cw<c-u>
 nnoremap A cw
 
 " Open console in current directory
-nnoremap ,t :!xterm &<cr>
+" nnoremap ,t :!xterm &<cr>
+
+" [MCN] Open xst in current directory
+nnoremap ,t :!xst &<cr>
 
 " Open editor to edit vifmrc and apply settings after returning to vifm
 nnoremap ,c :write | edit $MYVIFMRC | restart<cr>
@@ -450,14 +461,19 @@ nnoremap ,C :!gvim --remote-tab-silent $MYVIFMRC &<cr>
 nnoremap ,w :set wrap!<cr>
 
 " Example of standard two-panel file managers mappings
+" [MCN] <f2> rename file
 nnoremap <f2> cw<c-a>
 nnoremap <f3> :!less %f<cr>
 nnoremap <f4> :edit<cr>
 nnoremap <f5> :copy<cr>
 nnoremap <f6> :move<cr>
 nnoremap <f7> :delete<cr>
+
+" [MCN] f8: create a new file
 nnoremap <f8> :touch<space>
+" [MCN] f9: create a new folder 
 nnoremap <f9> :mkdir<space>
+" [MCN] f12: exit
 nnoremap <f12> ZZ
 
 " ------------------------------------------------------------------------------
