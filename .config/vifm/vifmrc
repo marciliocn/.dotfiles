@@ -451,6 +451,10 @@ elseif executable('xclip')
     nnoremap yd :!echo %d | xclip %i<cr>
     " Yank current file path into the clipboard
     nnoremap yf :!echo %c:p | xclip %i<cr>
+    " [MCN] Yank current filename without path into the clipboard
+    nnoremap yn :!echo -n %c | xclip %i<cr>
+    " [MCN] Yank root of current file's name into the clipboard
+    nnoremap yr :!echo -n %c:r | xclip %i<cr>
 elseif executable('xsel')
     " Yank current directory path into primary and selection clipboards
     nnoremap yd :!echo -n %d | xsel --input --primary %i &&
