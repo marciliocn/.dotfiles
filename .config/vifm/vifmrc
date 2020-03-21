@@ -360,6 +360,11 @@ command pack apack %a %f &>/dev/null &
 " map pack command
 nnoremap cp :pack<space>
 
+" [MCN] Repack selected file
+command repack arepack %f %a &>/dev/null &
+" map repack command adding a new filename and extension
+nnoremap rcp :repack<space>
+
 " Syntax highlighting in preview
 "
 " Explicitly set highlight type for some extensions
