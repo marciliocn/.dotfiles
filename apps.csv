@@ -36,6 +36,7 @@ s,font-inconsolata-otf,"is a monospaced font for X (xorg-fonts package is very b
 s,neofetch,"is a system information (thinking about exclude this)."
 s,zathura,"is a document viewer with vim-like bindings."
 s,zathura-pdf-poppler,"is a zathura pdf plugin."
+s,mpv,"is a video player."
 s,neovim,"is a text editor awesome."
 s,python3,"is the Python 3 engine."
 s,python3-pip,"is the package manager for Python 3."
