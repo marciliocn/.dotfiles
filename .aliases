@@ -13,6 +13,7 @@ alias cp='cp -i'                              # confirm copy
 alias mv='mv -i'                              # confirm move
 
 alias nf='neofetch'                           # Neofetch shortcut
+alias neofetch='screenfetch'                  # Neofetch shortcut
 
 alias tempo='curl wttr.in/sao-paulo'          # forecast for Sao Paulo
 
