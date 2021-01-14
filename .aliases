@@ -1,6 +1,6 @@
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'   # Enable specific Git for `.dotfile` directory
 
-alias ls='ls -G'                              # colorize `ls` output
+alias ls='ls ---color'                        # colorize `ls` output
 alias grep='grep --color=auto'                # colorize `grep` output
 alias ..='cd ..'
 alias ...='cd ../..'
