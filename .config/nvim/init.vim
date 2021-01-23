@@ -9,7 +9,7 @@ call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 " Lista de Plugins usados 
-call minpac#add('dracula/vim',{'name': 'dracula'})
+call minpac#add('dracula/vim')
 
 "===========
 "= CONFIGS =
