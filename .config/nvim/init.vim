@@ -10,6 +10,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 " Lista de Plugins usados 
 call minpac#add('dracula/vim')
+call minpac#add('mattn/emmet-vim')
 
 "===========
 "= CONFIGS =
