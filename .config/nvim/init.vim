@@ -1,16 +1,14 @@
 "===========
 "= PLUGINS =
 "===========
-" Gerenciador de Pacotes MINPAC
-packadd minpac
-call minpac#init()
-
-" minpac must have {'type': 'opt'} so that it can be loaded with `packadd`.
-call minpac#add('k-takata/minpac', {'type': 'opt'})
+" Plugin Manager = Vim-Plug
+call plug#begin()
 
 " Lista de Plugins usados 
-call minpac#add('dracula/vim')
-call minpac#add('mattn/emmet-vim')
+Plug 'dracula/vim', {'name':'dracula'}
+Plug 'mattn/emmet-vim'
+
+call plug#end()
 
 "===========
 "= CONFIGS =
@@ -79,6 +77,6 @@ nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 "===========
 " Habilita coloração de syntax para arquivos de códigos fonte
 syntax enable
+
 " Ativa o tema Drácula
-packadd! dracula
 colorscheme dracula
